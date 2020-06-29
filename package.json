@@ -1,0 +1,27 @@
+{
+  "name": "adding-data-persistence-sprint",
+  "version": "1.0.0",
+  "description": "Data Persistance Sprint",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdleonard93/web-sprint-challenge-adding-data-persistence.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdleonard93/web-sprint-challenge-adding-data-persistence/issues"
+  },
+  "homepage": "https://github.com/kdleonard93/web-sprint-challenge-adding-data-persistence#readme",
+  "dependencies": {
+    "-": "0.0.1",
+    "ge": "0.0.4",
+    "handlebars": "^4.7.6",
+    "knex": "^0.21.1",
+    "sqlite3": "^4.2.0"
+  }
+}
