@@ -2,10 +2,8 @@ const express = require("express");
 
 const server = express();
 
-server.get("/", (req, res) => {
-  res.json({ message: "Hey folks" });
+server.use(express.json());
 
-  server.listen(4000, () => {
-    console.log("Server started on port 4000");
-  });
+server.get("/", (req, res) => {
+  res.status(200).json({ message: "Hey folks" });
 });
