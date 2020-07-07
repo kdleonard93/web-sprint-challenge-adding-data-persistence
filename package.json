@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js",
+    "server": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,13 @@
   "homepage": "https://github.com/kdleonard93/web-sprint-challenge-adding-data-persistence#readme",
   "dependencies": {
     "-": "0.0.1",
+    "express": "^4.17.1",
     "ge": "0.0.4",
     "handlebars": "^4.7.6",
     "knex": "^0.21.1",
     "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

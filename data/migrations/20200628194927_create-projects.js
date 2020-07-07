@@ -1,14 +1,14 @@
 exports.up = function (knex, Promise) {
   return knex.schema
 
-    .createTable("Projects", (tbl) => {
+    .createTable("projects", (tbl) => {
       tbl.increments("id").unique();
       tbl.string("name", 255).notNullable();
       tbl.string("description", 255);
       tbl.boolean("Completed").notNullable().defaultTo(false);
     })
 
-    .createTable("Resources", (tbl) => {
+    .createTable("resources", (tbl) => {
       tbl.increments("id").unique();
       tbl.string("name", 255).notNullable();
       tbl.string("description", 255);
@@ -20,7 +20,7 @@ exports.up = function (knex, Promise) {
         .onUpdate("CASCADE");
     })
 
-    .createTable("Tasks", (tbl) => {
+    .createTable("tasks", (tbl) => {
       tbl.increments("id").unique();
       tbl.string("description", 255).notNullable();
       tbl.string("notes", 255).notNullable();
@@ -28,7 +28,7 @@ exports.up = function (knex, Promise) {
     })
     .createTable("project_resources", (tbl) => {
       tbl.increments("id");
-      //foreign keys
+      //foreign keys`
       tbl
         .integer("project_id")
         .unsigned()
