@@ -5,9 +5,9 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('resources').insert([
-        {id: 1, name: 'Resource 1', description: "Love everything Gold"},
-        {id: 2, name: 'Resource 2', description: "Love everything Silver"},
-        {id: 3, name: 'Resource 3', description: "Love everything Bronze"}
+        {id: 1, resource_name: 'Resource 1', resource_description: "Love everything Gold"},
+        {id: 2, resource_name: 'Resource 2', resource_description: "Love everything Silver"},
+        {id: 3, resource_name: 'Resource 3', resource_description: "Love everything Bronze"}
       ]);
     });
 };
