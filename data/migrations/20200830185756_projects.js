@@ -12,7 +12,7 @@ exports.up = async function (knex) {
     table.text("resource_description");
   });
 
-  await knex.schema.creatTable("tasks", (table) => {
+  await knex.schema.createTable("tasks", (table) => {
     table.increments();
     table.text("task_description", 255).notNull();
     table.text("notes").notNull();
