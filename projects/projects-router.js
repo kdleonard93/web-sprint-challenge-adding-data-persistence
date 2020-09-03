@@ -2,13 +2,24 @@ const express = require("express");
 const Projects = require('./project-model')
 const router = express.Router()
 
-router.get("/", async (req, res) => {
-    Projects.find()
-    .then(projects => {
-        res.status(200).json(projects)
+router.get("/", async (req, res, next) => {
+    try{
+        const projects = await Projects.find()
+        res.json(projects)
+    }
+    catch(err){
+        next(err)
+    }
+})
+
+router.post("/", (req, res, next) => {
+    const projectData = req.body;
+    Projects.add(projectData)
+    .then(project => {
+        res.status(201).json(project)
     })
-    .catch(error => {
-        res.status(500).json({message: "Cannot Retrieve Projects"})
+    .catch(err => {
+        res.status(500).json({ message: "Failed to create a new project"})
     })
 })
 
