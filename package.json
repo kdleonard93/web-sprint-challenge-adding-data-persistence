@@ -20,7 +20,8 @@
   "homepage": "https://github.com/kdleonard93/web-sprint-challenge-adding-data-persistence#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "knex": "^0.21.7"
+    "knex": "^0.21.7",
+    "sqlite": "^4.0.15"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
